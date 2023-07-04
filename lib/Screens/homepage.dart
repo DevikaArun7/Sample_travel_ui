@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample_ui/Screens/drawer.dart';
+import 'package:sample_ui/Screens/our_packages.dart';
 import 'package:sample_ui/Screens/slider.dart';
 
 class HomePage extends StatefulWidget {
@@ -45,7 +46,10 @@ class _HomePageState extends State<HomePage> {
            ),
            Padding(
              padding: const EdgeInsets.all(13.0),
-             child: ElevatedButton(onPressed: (){}, child: Text("Our Packages"),),
+             child: ElevatedButton(onPressed: (){Navigator.push(
+                context,
+                MaterialPageRoute(builder:(context) => const OurPackages()),
+              );}, child: Text("Our Packages"),),
            ),
           ],
           

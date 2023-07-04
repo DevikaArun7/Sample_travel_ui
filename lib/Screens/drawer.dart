@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:sample_ui/Screens/mybooking.dart';
 import 'package:sample_ui/Screens/signin.dart';
 
 class NavBar extends StatelessWidget {
@@ -20,7 +21,7 @@ class NavBar extends StatelessWidget {
             onTap: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context) => const SignIn()),
+                MaterialPageRoute(builder:(context) => MyBookingPage()),
               );
             }, 
             child: const Padding(

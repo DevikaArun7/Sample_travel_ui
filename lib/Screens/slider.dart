@@ -88,7 +88,10 @@ class _SliderScreenState extends State<SliderScreen> {
             ),
           ],
         ),
-      ]),
+      ],
+      
+      ),
+    
     );
   }
 }

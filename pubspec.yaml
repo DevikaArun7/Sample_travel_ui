@@ -66,6 +66,9 @@ flutter:
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Delhi.jpeg
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Agra.jpeg
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Goa.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/slid img2.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaipur.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Varanasi.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
