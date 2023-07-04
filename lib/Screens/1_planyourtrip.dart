@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sample_ui/Screens/2_planyourtrip.dart';
 
 import 'dropdownbutton.dart';
 
@@ -83,7 +84,10 @@ class _PlanYorTrip1State extends State<PlanYorTrip1> {
                 child: Text('When do you want to go?',style: TextStyle(fontSize: 20),),
               ),
               ),
-              ElevatedButton(onPressed: (){}, child: Text("Next"),),
+              ElevatedButton(onPressed: (){Navigator.push(
+                context,
+                MaterialPageRoute(builder:(context) => PlanYourTrip2()),
+              );}, child: Text("Next"),),
         ],
       ),
     );
