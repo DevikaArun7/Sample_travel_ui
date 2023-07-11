@@ -21,7 +21,7 @@ class _PlanYorTrip1State extends State<PlanYorTrip1> {
         backgroundColor: Colors.green,
         title: Text("Let's Plan Your Trip"),
       ),
-      body: Column(
+      body: ListView(
         children: [
           TextFormFor(hintText: "Type your name"),
           SizedBox(

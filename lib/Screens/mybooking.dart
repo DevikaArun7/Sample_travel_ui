@@ -15,7 +15,7 @@ class _MyBookingPageState extends State<MyBookingPage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-       backgroundColor: const Color(0xFFC0CECE),
+       
         appBar: AppBar(
           title: const Text("My Booking"),
           bottom: const TabBar(tabs: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:sample_ui/Screens/payment.dart';
 
 class TrainBooking extends StatefulWidget {
   const TrainBooking({super.key});
@@ -40,7 +41,7 @@ class _TrainBookingState extends State<TrainBooking> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
-                          children: [
+                          children: const [
                             Text("3A"),
                             SizedBox(width: 10,),
                             Icon(Icons.monetization_on_outlined),
@@ -119,7 +120,11 @@ class _TrainBookingState extends State<TrainBooking> {
              )
               ),
             ],
-          )
+          ),
+          TextButton(onPressed: (){Navigator.push(
+                context,
+                MaterialPageRoute(builder:(context) => PaymentScreen()),
+              );}, child: Text("Next Page"))
         ],
       ),
     );
