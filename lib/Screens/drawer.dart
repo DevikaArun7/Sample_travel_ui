@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:sample_ui/Screens/homepage.dart';
+import 'package:sample_ui/Screens/hotelbooking.dart';
 import 'package:sample_ui/Screens/mybooking.dart';
+import 'package:sample_ui/Screens/our_packages.dart';
 import 'package:sample_ui/Screens/signin.dart';
+import 'package:sample_ui/Screens/trainbooking.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
@@ -42,12 +46,12 @@ class NavBar extends StatelessWidget {
             ),
           ),
            GestureDetector(
-            onTap: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder:(context) => const SignIn()),
-              );
-            },
+            // onTap: (){
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder:(context) => const SignIn()),
+            //   );
+            // },
             child: const Padding(
               padding: EdgeInsets.all(13.0),
               child: Text("Share",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.white),),
@@ -57,7 +61,7 @@ class NavBar extends StatelessWidget {
             onTap: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context) => const SignIn()),
+                MaterialPageRoute(builder:(context) => const HomePage()),
               );
             },
             child: const Padding(
@@ -69,7 +73,7 @@ class NavBar extends StatelessWidget {
             onTap: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context) => const SignIn()),
+                MaterialPageRoute(builder:(context) => const OurPackages()),
               );
             },
             child: const Padding(
@@ -81,7 +85,7 @@ class NavBar extends StatelessWidget {
             onTap: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context) => const SignIn()),
+                MaterialPageRoute(builder:(context) => const TrainBooking()),
               );
             },
             child: const Padding(
@@ -93,13 +97,14 @@ class NavBar extends StatelessWidget {
             onTap: (){  
               Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context) => SignIn()),
+                MaterialPageRoute(builder:(context) => HotelBooking()),
               );
             },
             child: Padding(
               padding: const EdgeInsets.all(13.0),
               child: Text("Book Hotels",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.white),),
-            ),    
+            ),
+                
           )
         ],
       ),
