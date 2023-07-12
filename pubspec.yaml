@@ -73,6 +73,10 @@ flutter:
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/google pay img.png
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/QR code img.png
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/payment img.png
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/hotel img1.jpg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/hotel img2.jpg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Map.png
+   
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

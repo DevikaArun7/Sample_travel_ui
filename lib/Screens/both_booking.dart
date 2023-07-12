@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:sample_ui/Screens/book_details.dart';
+import 'package:sample_ui/Screens/hotelbooking.dart';
 
 class BothBooking extends StatefulWidget {
   const BothBooking({super.key});
@@ -23,7 +25,10 @@ class _BothBookingState extends State<BothBooking> {
               width: 350,
               height: 50,
             color: Colors.amber,
-            child: Center(child: TextButton(onPressed: (){}, child: Text("Book Hotels"))),
+            child: Center(child: TextButton(onPressed: (){Navigator.push(
+                context,
+                MaterialPageRoute(builder:(context) => HotelBooking()),
+              );}, child: Text("Book Hotels"))),
             ),
           ),
           SizedBox(height: 35,),
@@ -43,7 +48,10 @@ class _BothBookingState extends State<BothBooking> {
               width: 350,
               height: 50,
             color: Colors.amber,
-            child: Center(child: TextButton(onPressed: (){}, child: Text("Finish Booking"))),
+            child: Center(child: TextButton(onPressed: (){Navigator.push(
+                context,
+                MaterialPageRoute(builder:(context) => BookingDetailsScreen()),
+              );}, child: Text("Finish Booking"))),
             ),
           )
         ],
