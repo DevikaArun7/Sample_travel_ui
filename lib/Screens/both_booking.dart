@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:sample_ui/Screens/book_details.dart';
+import 'package:sample_ui/Screens/cancelbooking.dart';
+import 'package:sample_ui/Screens/homepage.dart';
 import 'package:sample_ui/Screens/hotelbooking.dart';
 
 class BothBooking extends StatefulWidget {
@@ -50,7 +51,7 @@ class _BothBookingState extends State<BothBooking> {
             color: Colors.amber,
             child: Center(child: TextButton(onPressed: (){Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context) => BookingDetailsScreen()),
+                MaterialPageRoute(builder:(context) => HomePage()),
               );}, child: Text("Finish Booking"))),
             ),
           )

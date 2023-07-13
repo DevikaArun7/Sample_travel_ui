@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:sample_ui/Screens/both_booking.dart';
+import 'package:sample_ui/Screens/hotelbookdetails.dart';
 import 'package:sample_ui/Screens/map.dart';
-import 'package:sample_ui/Screens/payment.dart';
 
 class HotelBooking extends StatefulWidget {
   const HotelBooking({super.key});
@@ -62,11 +63,11 @@ class _HotelBookingState extends State<HotelBooking> {
           Text("Price:For 2 Night -->1400"),
           ElevatedButton(onPressed: (){
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) =>PaymentScreen()),
+        MaterialPageRoute(builder: (context) =>HotelBookingDetails()),
       );
     }, child: Text("Book Now",)),
           ElevatedButton(onPressed: (){
-      Navigator.of(context).pushReplacement(
+      Navigator.of(context).push(
         MaterialPageRoute(builder: (context) =>MapPage()),
       );
     }, child: Text("Show On Map"))

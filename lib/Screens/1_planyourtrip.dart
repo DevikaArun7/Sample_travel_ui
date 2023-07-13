@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_ui/Screens/2_planyourtrip.dart';
@@ -69,25 +68,30 @@ class _PlanYorTrip1State extends State<PlanYorTrip1> {
             ],
           ),
           TextButton(
-            
-              onPressed: () {
-                showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now(),
-                    firstDate: DateTime.now(),
-                    lastDate: DateTime.now());
-                    
-              },
-
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Text('When do you want to go?',style: TextStyle(fontSize: 20),),
+            onPressed: () {
+              showDatePicker(
+                  context: context,
+                  initialDate: DateTime.now(),
+                  firstDate: DateTime.now(),
+                  lastDate: DateTime.now());
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Text(
+                'When do you want to go?',
+                style: TextStyle(fontSize: 20),
               ),
-              ),
-              ElevatedButton(onPressed: (){Navigator.push(
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context) => PlanYourTrip2()),
-              );}, child: Text("Next"),),
+                MaterialPageRoute(builder: (context) => PlanYourTrip2()),
+              );
+            },
+            child: Text("Next"),
+          ),
         ],
       ),
     );
@@ -103,10 +107,10 @@ class TextFormFor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
+    return Padding(
       padding: EdgeInsets.all(13.0),
       child: TextField(
-        decoration: InputDecoration(hintText: " "),
+        decoration: InputDecoration(hintText: hintText),
       ),
     );
   }
