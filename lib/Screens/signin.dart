@@ -1,75 +1,106 @@
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:sample_ui/Screens/homepage.dart';
+import 'package:sample_ui/Screens/homepage1.dart';
+import 'package:sample_ui/Screens/packages/widget/backgroundimage.dart';
+import 'package:sample_ui/Screens/packages/widget/text.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({super.key});
 
-  @override
-  State<SignIn> createState() => _SignInState();
-}
+class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
 
-class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFC0CECE),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/travelimg.jpeg'))),
-        child: Column(
-          children: [
-            Center(
-                child: Padding(
-              padding: const EdgeInsets.all(40.0),
-              child: Text(
-                "Sign In",
-                style: TextStyle(fontSize: 35),
-              ),
-            )),
-            Row(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text(
-                    "Email",
-                    style: TextStyle(fontSize: 22),
-                  ),
-                ),
-              ],
-            ),
-            TextFormField(),
-            Row(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text(
-                    "Password",
-                    style: TextStyle(fontSize: 22),
-                  ),
-                ),
-              ],
-            ),
-            TextFormField(),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => HomePage(),
+    return Stack(
+      children: [
+        BackgroundImage(),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          body: SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  height: 200,
+                  child: Center(
+                    child: Text("SignIn",style: kHeading,),
                     ),
-                  );
-                },
-                child: Text("LogIn")),
-          ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: Column(
+                          children: [
+                            Container(
+                              decoration:BoxDecoration(
+                                color: Colors.grey[600]!.withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(20)
+                              ) ,
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  contentPadding: 
+                                   EdgeInsets.symmetric
+                                   (vertical:20 ),
+                                  border: InputBorder.none,
+                                  hintText:'Email',
+                                  icon: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.mail_outline,color: Colors.white,),
+                                  ),
+                                  hintStyle:kBodyText,
+                                ),
+                                style: kBodyText,
+                                keyboardType: TextInputType.emailAddress,
+                                textInputAction:TextInputAction.next ,
+                              ),
+                            ),
+                            SizedBox(height: 30,),
+                             Container(
+                              decoration:BoxDecoration(
+                                color: Colors.grey[600]!.withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(20)
+                              ) ,
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  contentPadding: 
+                                   EdgeInsets.symmetric
+                                   (vertical:20 ),
+                                  border: InputBorder.none,
+                                  hintText:'Password',
+                                  icon: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.lock_open,color: Colors.white,),
+                                  ),
+                                  hintStyle:kBodyText,
+                                ),
+                                obscureText: true,
+                                style: kBodyText,
+                                textInputAction:TextInputAction.done ,
+                              ),
+                              
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(25.0),
+                              child: Text("Forgot Password?",style: kBodyText),
+                            ),
+                            ElevatedButton(onPressed: (){ Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>const HomePage(),
+                      ),
+                    );
+                 }, child: Text("Done"))
+                          ],
+                        ),
+                      ),
+                    ),
+              ],
+            ),
+          ),
         ),
-      ),
+      ],
     );
   }
 }
+

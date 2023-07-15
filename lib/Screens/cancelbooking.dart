@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:sample_ui/Screens/homepage.dart';
+import 'package:sample_ui/Screens/homepage1.dart';
 import 'package:sample_ui/Screens/hotelbooking.dart';
 
 class CancelBooking extends StatefulWidget {
@@ -17,10 +18,15 @@ class _CancelBookingState extends State<CancelBooking> {
     return Scaffold(
        backgroundColor: const Color(0xFFC0CECE),
        appBar: AppBar(
-        title: Text("Cancel Booking"),
        ),
        body: Column(
         children: [
+          Row(children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("For Cancel The Trip",style: TextStyle(fontSize: 23),),
+            )
+          ],),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Row(

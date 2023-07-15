@@ -1,6 +1,6 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:sample_ui/Screens/signup.dart';
 
 
@@ -47,7 +47,7 @@ class _FirstScreenState extends State<FirstScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children:[  
-                  IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupPage(),
+                  IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen (),
                   ),
                   );
                   }, 

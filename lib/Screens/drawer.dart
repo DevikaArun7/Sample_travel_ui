@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:sample_ui/Screens/homepage.dart';
 import 'package:sample_ui/Screens/hotelbooking.dart';
 import 'package:sample_ui/Screens/mybooking.dart';
 import 'package:sample_ui/Screens/our_packages.dart';
@@ -14,7 +11,6 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Drawer(
-      backgroundColor: Colors.blueGrey,
       
       child: Container(
         decoration: BoxDecoration(
@@ -44,7 +40,7 @@ class NavBar extends StatelessWidget {
               onTap: (){  
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder:(context) => const SignIn()),
+                  MaterialPageRoute(builder:(context) => SignInPage()),
                 );
               },
               child: const Padding(

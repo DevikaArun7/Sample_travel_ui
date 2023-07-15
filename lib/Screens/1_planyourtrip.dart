@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_ui/Screens/2_planyourtrip.dart';
 
@@ -34,10 +33,10 @@ class _PlanYorTrip1State extends State<PlanYorTrip1> {
           SizedBox(
             height: 10,
           ),
-          TextFormFor(hintText: "Type your name"),
-          SizedBox(
-            height: 10,
-          ),
+          // TextFormFor(hintText: "Type your name"),
+          // SizedBox(
+          //   height: 10,
+          // ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -73,7 +72,7 @@ class _PlanYorTrip1State extends State<PlanYorTrip1> {
                   context: context,
                   initialDate: DateTime.now(),
                   firstDate: DateTime.now(),
-                  lastDate: DateTime.now());
+                  lastDate: DateTime.now().add(Duration(days: 60)));
             },
             child: Padding(
               padding: const EdgeInsets.all(15.0),

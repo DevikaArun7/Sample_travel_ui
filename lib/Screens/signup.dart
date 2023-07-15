@@ -1,100 +1,161 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:sample_ui/Screens/packages/widget/backgroundimage.dart';
+import 'package:sample_ui/Screens/packages/widget/text.dart';
 import 'package:sample_ui/Screens/signin.dart';
 
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
 
-  @override
-  State<SignupPage> createState() => _SignupPageState();
-}
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
-class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFC0CECE),
-      body:
-       Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/travelimg.jpeg'))),
-         child: ListView(
-          children:  [
-             const Padding(
-              padding: EdgeInsets.all(40.0),
-              child: Center(child: Text("Sign Up",style: TextStyle(fontSize: 35),)),
-            ),
-            Row(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text("Email",style: TextStyle(fontSize: 22),),
-                ),
-              ],
-            ),
-            TextFormField(),
-            Row(
+    return Stack(
+      children: [
+        BackgroundImage(),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          body: SafeArea(
+            child: ListView(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text("Username",style: TextStyle(fontSize:22),),
-                )
-              ],
-            ),
-            TextField(),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text("Password",style: TextStyle(fontSize:22),),
-                )
-              ],
-            ),
-            TextFormField(),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text("Confirm  Password",style: TextStyle(fontSize:22),),
-                )
-              ],
-            ),
-            TextFormField(), 
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Column(
-                children: [
-                  Text("Have an account?"),
-                   GestureDetector(
-                onTap: (){  
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder:(context) => SignIn()),
-                  );
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(13.0),
-                  child: Text("LogIn",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.black),),
-                ),
-                    
-              )
-                ],
-              ),
-            ),
-            ElevatedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SignIn(),
+                Container(
+                  height: 200,
+                  child: Center(
+                    child: Text("SignUp",style: kHeading,),
                     ),
-                    );}, child: Text("Register")),
-          ],
-          
-             ),
-       ),
+                    ),
+                   
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: Column(
+                          children: [
+                            Container(
+                              decoration:BoxDecoration(
+                                color: Colors.grey[600]!.withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(20)
+                              ) ,
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  contentPadding: 
+                                   EdgeInsets.symmetric
+                                   (vertical:20 ),
+                                  border: InputBorder.none,
+                                  hintText:'Email',
+                                  icon: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.mail_outline,color: Colors.white,),
+                                  ),
+                                  hintStyle:kBodyText,
+                                ),
+                                style: kBodyText,
+                                keyboardType: TextInputType.emailAddress,
+                                textInputAction:TextInputAction.next ,
+                              ),
+                            ),
+                            SizedBox(height: 30,),
+                             Container(
+                              decoration:BoxDecoration(
+                                color: Colors.grey[600]!.withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(20)
+                              ) ,
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  contentPadding: 
+                                   EdgeInsets.symmetric
+                                   (vertical:20 ),
+                                  border: InputBorder.none,
+                                  hintText:'Username',
+                                  icon: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.person,color: Colors.white,),
+                                  ),
+                                  hintStyle:kBodyText,
+                                ),
+                                style: kBodyText,
+                                keyboardType: TextInputType.emailAddress,
+                                textInputAction:TextInputAction.next ,
+                              ),
+                            ),
+                            SizedBox(height: 30,),
+                             Container(
+                              decoration:BoxDecoration(
+                                color: Colors.grey[600]!.withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(20)
+                              ) ,
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  contentPadding: 
+                                   EdgeInsets.symmetric
+                                   (vertical:20 ),
+                                  border: InputBorder.none,
+                                  hintText:'Password',
+                                  icon: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.lock_open,color: Colors.white,),
+                                  ),
+                                  hintStyle:kBodyText,
+                                ),
+                                obscureText: true,
+                                style: kBodyText,
+                                textInputAction:TextInputAction.done ,
+                              ),
+                              
+                            ),
+                            SizedBox(height:30 ,),
+                            Container(
+                              decoration:BoxDecoration(
+                                color: Colors.grey[600]!.withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(20)
+                              ) ,
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  contentPadding: 
+                                   EdgeInsets.symmetric
+                                   (vertical:20 ),
+                                  border: InputBorder.none,
+                                  hintText:'Conform Password',
+                                  icon: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.lock_outline,color: Colors.white,),
+                                  ),
+                                  hintStyle:kBodyText,
+                                ),
+                                style: kBodyText,
+                                keyboardType: TextInputType.emailAddress,
+                                textInputAction:TextInputAction.next ,
+                              ),
+                            ),
+                           
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+                    const Center(child: Text("Have an account?",style: kBodyText,)),
+                    TextButton(onPressed: (){ Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>const SignInPage(),
+                      ),
+                    );
+                 }, child: const Text("Login",style:TextStyle(fontSize: 15,),)),
+                  Padding(
+                    padding: const EdgeInsets.all(30.0),
+                    child: ElevatedButton(onPressed: (){ Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>const SignInPage(),
+                      ),
+                    );
+                 }, child: Text("Done")),
+                  )
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
+

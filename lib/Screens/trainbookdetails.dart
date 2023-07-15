@@ -89,14 +89,7 @@ class _TrainBookingDetailsState extends State<TrainBookingDetails> {
           ),
         ],
        ) ,
-      // body: Center(child: ElevatedButton(onPressed: (){
-      //             Navigator.push(
-      //               context,
-      //               MaterialPageRoute(
-      //                 builder: (context) =>BothBooking(),
-      //               ),
-      //             );
-      //           }, child: Text("next"))),
+        
     );
   }
 }
