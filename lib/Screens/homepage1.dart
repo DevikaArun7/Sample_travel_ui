@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:sample_ui/Screens/drawer.dart';
+import 'package:sample_ui/Screens/our_packages.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,8 +22,19 @@ class _HomePageState extends State<HomePage> {
       drawer: NavBar(),
       backgroundColor: const Color(0xFFC0CECE),
       
-    
-      body: Column(
+     appBar: AppBar(
+         toolbarHeight: 100,
+         iconTheme:IconThemeData(color: Colors.amber) ,
+         elevation: 0.0,
+         backgroundColor: const Color(0xFFC0CECE),
+         flexibleSpace: FlexibleSpaceBar(
+           title: Padding(
+             padding: const EdgeInsets.only(left: 20.0,right: 120),
+             child: Text("What Would you like to find?",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 23),),
+           ),
+         ),
+       ),
+      body: ListView(
         children: [
          Stack(
           children: [
@@ -40,30 +52,61 @@ class _HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: Center(
-                    child: Card(
-                      
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), ),
-                      elevation: 20,
-                      // child: IconButton(onPressed: (){
-                      //    _scaffoldKey.currentState!.openDrawer();
-                      // }, icon: Icon(Icons.menu)),
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Image.asset("C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Kerala.jpeg",
-                         ),
-                          SizedBox(
-                            height:400,
-                            width: 500,                                                   
+                    child: Column(
+                      children: [
+                        Card(
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), ),
+                          elevation: 20,
+                          // child: IconButton(onPressed: (){
+                          //    _scaffoldKey.currentState!.openDrawer();
+                          // }, icon: Icon(Icons.menu)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Image.asset("C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/images/Kerala.jpeg",fit: BoxFit.cover,
+                             ),
+                              SizedBox(
+                                height:50,
+                                width: 500,                                                   
+                              ),
+                              
+                            
+                            ],
                           ),
-                          Text("This is Flutter card"),
-                        
-                        ],
-                      ),
-                    ),
+                        ),
+                        ),
+                        SizedBox(height: 20,),
+                         Card(
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), ),
+                          elevation: 20,
+                          // child: IconButton(onPressed: (){
+                          //    _scaffoldKey.currentState!.openDrawer();
+                          // }, icon: Icon(Icons.menu)),
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Image.asset("C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/images/Kerala.jpeg",fit: BoxFit.cover,
+                             ),
+                              SizedBox(
+                                height:50,
+                                width: 500,                                                   
+                              ),
+                              ElevatedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>OurPackages(),
+                  ),
+                  );
+                 }, child: Text("See Our Packages"))
+                            
+                            ],
+                          ),
+                        ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

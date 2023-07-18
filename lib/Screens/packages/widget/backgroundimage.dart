@@ -14,7 +14,7 @@ class BackgroundImage extends StatelessWidget {
       ).createShader(bounds),
       blendMode: BlendMode.darken,
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(image: AssetImage("C:/Users/HP/Desktop/Sample ui making/sample_ui/images/background img 2.jpeg"),
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(Colors.black45, 

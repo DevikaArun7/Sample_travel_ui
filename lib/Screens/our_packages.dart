@@ -32,42 +32,60 @@ class _OurPackagesState extends State<OurPackages> {
         body: ListView(
           padding: EdgeInsets.all(10),
           children: [
-            OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const TajMahal(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/slid img2.jpeg',
-                title: 'Taj Mahal'),
-                 OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const JaipurPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaipur.jpeg',
-                title: 'Jaipur'),
-             OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => VaranasiPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Varanasi.jpeg',
-                title: 'Varanasi'),
+            Card(
+              elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+              child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TajMahal(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/slid img2.jpeg',
+                  title: 'Taj Mahal'),
+            ),
+            SizedBox(height: 6,),
+                 Card(
+                   elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+                   child: OurPackages1(
+                                 onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const JaipurPage(),
+                      ),
+                    );
+                                 },
+                                 image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaipur.jpeg',
+                                 title: 'Jaipur'),
+                 ),
+                 SizedBox(height: 6,),
+             Card(
+               elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+               child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => VaranasiPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Varanasi.jpeg',
+                  title: 'Varanasi'),
+             ),
+             SizedBox(height: 6,),
                 OurPackages1(
                 onTap: () {
                   Navigator.push(
@@ -80,126 +98,186 @@ class _OurPackagesState extends State<OurPackages> {
                 image:
                     'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Kerala.jpeg',
                 title: 'Kerala'),
-              OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const GoaPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Goa.jpeg',
-                title: 'Goa'),
-                 OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const DelhiPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Delhi.jpeg',
-                title: 'Delhi'),
-            OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MumbaiPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mumbai.jpeg',
-                title: 'Mumbai'),
-             OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const UdaipurPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Udaipur.jpeg',
-                title: 'Udaipur'),
-           OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const AmrithsarPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Amithsar.jpeg',
-                title: 'Amithsar'),
-             OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const HampiPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Hampi.jpeg',
-                title: 'Hampi'),
-          OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const JaisalmarPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaisalmar.jpeg',
-                title: 'Jaisalmar'),
-            OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const AgraPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Agra.jpeg',
-                title: 'Agra'),
-           OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MysorePage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mysore.jpeg',
-                title: 'Mysore'),
-             OurPackages1(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ShimlaPage(),
-                    ),
-                  );
-                },
-                image:
-                    'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Shimla.jpeg',
-                title: 'Shimla'),
+                SizedBox(height: 6,),
+              Card(
+                 elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+                child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const GoaPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Goa.jpeg',
+                  title: 'Goa'),
+              ),
+              SizedBox(height: 6,),
+                 Card(
+                   elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+                   child: OurPackages1(
+                                 onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DelhiPage(),
+                      ),
+                    );
+                                 },
+                                 image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Delhi.jpeg',
+                                 title: 'Delhi'),
+                 ),
+                 SizedBox(height: 6,),
+            Card(
+               elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+              child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MumbaiPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mumbai.jpeg',
+                  title: 'Mumbai'),
+            ),
+            SizedBox(height: 6,),
+             Card(
+               elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+               child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const UdaipurPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Udaipur.jpeg',
+                  title: 'Udaipur'),
+             ),
+             SizedBox(height: 6,),
+           Card(
+             elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+             child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AmrithsarPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Amithsar.jpeg',
+                  title: 'Amithsar'),
+           ),
+           SizedBox(height: 6,),
+             Card(
+               elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+               child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HampiPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Hampi.jpeg',
+                  title: 'Hampi'),
+             ),
+             SizedBox(height: 6,),
+          Card(
+             elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+            child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const JaisalmarPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaisalmar.jpeg',
+                  title: 'Jaisalmar'),
+          ),
+          SizedBox(height: 6,),
+            Card(
+               elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+              child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AgraPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Agra.jpeg',
+                  title: 'Agra'),
+            ),
+            SizedBox(height: 6,),
+           Card(
+             elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+             child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MysorePage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mysore.jpeg',
+                  title: 'Mysore'),
+           ),
+           SizedBox(height: 6,),
+             Card(
+               elevation: 13,
+              color: Color.fromARGB(255, 208, 201, 201),
+              shadowColor: Colors.black,
+               child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ShimlaPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Shimla.jpeg',
+                  title: 'Shimla'),
+             ),
           ],
         ));
   }

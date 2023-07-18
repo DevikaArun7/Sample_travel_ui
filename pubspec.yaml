@@ -43,7 +43,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  carousel_slider: 4.2.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -66,32 +65,32 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/front img.jpg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Kerala.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Delhi.jpeg
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Agra.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Goa.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/slid img2.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaipur.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Varanasi.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/upi img.png
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/google pay img.png
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/QR code img.png
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/payment img.png
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/hotel img1.jpg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/hotel img2.jpg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Map.png
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Amithsar.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Hampi.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaisalmar.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mumbai.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mysore.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Shimla.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Udaipur.jpeg
-    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/travelimg.jpeg
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/background img 1.jpeg
     - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/background img 2.jpeg
-   
-
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Delhi.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/front img.jpg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Goa.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/google pay img.png
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Hampi.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/hotel img1.jpg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/hotel img2.jpg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaipur.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaisalmar.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Kerala.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Map.png
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mumbai.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mysore.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/payment img.png
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/QR code img.png
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Shimla.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/slid img2.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/travelimg.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Udaipur.jpeg
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/upi img.png
+    - C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Varanasi.jpeg
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
