@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sample_ui/Screens/cancelbooking.dart';
-import 'package:sample_ui/Screens/homepage.dart';
 import 'package:sample_ui/Screens/homepage1.dart';
 
 class HotelBookingDetails extends StatefulWidget {

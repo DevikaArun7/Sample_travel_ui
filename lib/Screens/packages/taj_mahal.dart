@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:sample_ui/Screens/planourtrip.dart';
 
 import '../1_planyourtrip.dart';
 
@@ -40,7 +41,7 @@ class _TajMahalState extends State<TajMahal> {
              ),
              ElevatedButton(onPressed: (){Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context) => PlanYorTrip1()),
+                MaterialPageRoute(builder:(context) => PlanYourTrip()),
               );}, child: Text("Book This Tour"))
            ],
          ),

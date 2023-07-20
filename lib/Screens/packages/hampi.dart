@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:sample_ui/Screens/planourtrip.dart';
 
 import '../1_planyourtrip.dart';
 
@@ -39,7 +40,7 @@ class _HampiPageState extends State<HampiPage> {
              ),
              ElevatedButton(onPressed: (){Navigator.push(
                 context,
-                MaterialPageRoute(builder:(context) => PlanYorTrip1()),
+                MaterialPageRoute(builder:(context) => PlanYourTrip()),
               );}, child: Text("Book This Tour"))
            ],
          ),

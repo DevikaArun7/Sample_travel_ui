@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:sample_ui/Screens/cancelbooking.dart';
-import 'package:sample_ui/Screens/homepage.dart';
 import 'package:sample_ui/Screens/homepage1.dart';
 import 'package:sample_ui/Screens/hotelbooking.dart';
 import 'package:sample_ui/Screens/trainbooking.dart';
