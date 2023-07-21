@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:sample_ui/Screens/planourtrip.dart';
 
-import '../1_planyourtrip.dart';
 
 class JaipurPage extends StatefulWidget {
   const JaipurPage({super.key});

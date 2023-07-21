@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sample_ui/Screens/hotelbooking.dart';
 import 'package:sample_ui/Screens/mybooking.dart';
-import 'package:sample_ui/Screens/our_packages.dart';
 import 'package:sample_ui/Screens/signin.dart';
-import 'package:sample_ui/Screens/trainbooking.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
@@ -72,43 +69,55 @@ class NavBar extends StatelessWidget {
             //     child: Text("Home",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.white),),
             //   ),
             // ),
-             GestureDetector(
-              onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder:(context) => const OurPackages()),
-                );
-              },
-              child: const Padding(
-                padding: EdgeInsets.all(13.0),
-                child: Text("Our Packages",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.white),),
-              ),
-            ),
-             GestureDetector(
-              onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder:(context) => const TrainBooking()),
-                );
-              },
-              child: const Padding(
-                padding: EdgeInsets.all(13.0),
-                child: Text("Book Train",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.white),),
-              ),
-            ),
-             GestureDetector(
-              onTap: (){  
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder:(context) => HotelBooking()),
-                );
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(13.0),
-                child: Text("Book Hotels",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.white),),
-              ),
+            //  GestureDetector(
+            //   onTap: (){
+                
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder:(context) => SignInPage()),
+            //     );
+            //   },
+            //   child: const Padding(
+            //     padding: EdgeInsets.all(13.0),
+            //     child: Text("Log Out",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.white),),
+            //   ),
+            // ),
+          //   TextButton(onPressed: ()async{
+             
+          //     Get.offAll(()=>SignInPage());
+          //   }, 
+          //   child: Text("SignOut",textAlign:TextAlign.left,
+          //  style: TextStyle(
+          //   fontSize: 18,
+          //   fontWeight: FontWeight.bold,
+          //   decoration: TextDecoration.underline,
+          //   color: Colors.white),
+          //    ),),
+            //  GestureDetector(
+            //   onTap: (){
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder:(context) => const TrainBooking()),
+            //     );
+            //   },
+            //   child: const Padding(
+            //     padding: EdgeInsets.all(13.0),
+            //     child: Text("Book Train",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.white),),
+            //   ),
+            // ),
+            //  GestureDetector(
+            //   onTap: (){  
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder:(context) => HotelBooking()),
+            //     );
+            //   },
+            //   child: Padding(
+            //     padding: const EdgeInsets.all(13.0),
+            //     child: Text("Book Hotels",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Colors.white),),
+            //   ),
                   
-            )
+            // )
           ],
         ),
       ),

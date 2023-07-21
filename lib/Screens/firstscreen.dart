@@ -1,7 +1,7 @@
-import 'dart:io';
+
 
 import 'package:flutter/material.dart';
-import 'package:sample_ui/Screens/signup.dart';
+import 'package:sample_ui/Screens/signin.dart';
 
 
 class FirstScreen extends StatefulWidget {
@@ -47,7 +47,7 @@ class _FirstScreenState extends State<FirstScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children:[  
-                  IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen (),
+                  IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInPage(),
                   ),
                   );
                   }, 

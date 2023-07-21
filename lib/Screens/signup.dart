@@ -1,12 +1,17 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sample_ui/Controllers/authcontroller.dart';
+import 'package:sample_ui/Screens/homepage1.dart';
 import 'package:sample_ui/Screens/packages/widget/backgroundimage.dart';
 import 'package:sample_ui/Screens/packages/widget/text.dart';
 import 'package:sample_ui/Screens/signin.dart';
 
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+   SignUpScreen({super.key});
+
+  final ctrl = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +40,8 @@ class SignUpScreen extends StatelessWidget {
                                 color: Colors.grey[600]!.withOpacity(0.5),
                                 borderRadius: BorderRadius.circular(20)
                               ) ,
-                              child: const TextField(
+                              child:  TextField(
+                                controller:ctrl.email ,
                                 decoration: InputDecoration(
                                   contentPadding: 
                                    EdgeInsets.symmetric
@@ -59,8 +65,9 @@ class SignUpScreen extends StatelessWidget {
                                 color: Colors.grey[600]!.withOpacity(0.5),
                                 borderRadius: BorderRadius.circular(20)
                               ) ,
-                              child: const TextField(
-                                decoration: InputDecoration(
+                              child:  TextField(
+                                 controller:ctrl.username,
+                                decoration: const InputDecoration(
                                   contentPadding: 
                                    EdgeInsets.symmetric
                                    (vertical:20 ),
@@ -83,8 +90,9 @@ class SignUpScreen extends StatelessWidget {
                                 color: Colors.grey[600]!.withOpacity(0.5),
                                 borderRadius: BorderRadius.circular(20)
                               ) ,
-                              child: const TextField(
-                                decoration: InputDecoration(
+                              child:  TextField(
+                                controller: ctrl.password,
+                                decoration: const InputDecoration(
                                   contentPadding: 
                                    EdgeInsets.symmetric
                                    (vertical:20 ),
@@ -108,23 +116,23 @@ class SignUpScreen extends StatelessWidget {
                                 color: Colors.grey[600]!.withOpacity(0.5),
                                 borderRadius: BorderRadius.circular(20)
                               ) ,
-                              child: const TextField(
-                                decoration: InputDecoration(
-                                  contentPadding: 
-                                   EdgeInsets.symmetric
-                                   (vertical:20 ),
-                                  border: InputBorder.none,
-                                  hintText:'Conform Password',
-                                  icon: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Icon(Icons.lock_outline,color: Colors.white,),
-                                  ),
-                                  hintStyle:kBodyText,
-                                ),
-                                style: kBodyText,
-                                keyboardType: TextInputType.emailAddress,
-                                textInputAction:TextInputAction.next ,
-                              ),
+                              // child: const TextField(
+                              //   decoration: InputDecoration(
+                              //     contentPadding: 
+                              //      EdgeInsets.symmetric
+                              //      (vertical:20 ),
+                              //     border: InputBorder.none,
+                              //     hintText:'Conform Password',
+                              //     icon: Padding(
+                              //       padding: EdgeInsets.all(8.0),
+                              //       child: Icon(Icons.lock_outline,color: Colors.white,),
+                              //     ),
+                              //     hintStyle:kBodyText,
+                              //   ),
+                              //   style: kBodyText,
+                              //   keyboardType: TextInputType.emailAddress,
+                              //   textInputAction:TextInputAction.next ,
+                              // ),
                             ),
                            
                           ],
@@ -136,19 +144,23 @@ class SignUpScreen extends StatelessWidget {
                     TextButton(onPressed: (){ Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>const SignInPage(),
+                        builder: (context) => SignInPage(),
                       ),
                     );
                  }, child: const Text("Login",style:TextStyle(fontSize: 15,),)),
-                  Padding(
-                    padding: const EdgeInsets.all(30.0),
-                    child: ElevatedButton(onPressed: (){ Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>const SignInPage(),
-                      ),
-                    );
-                 }, child: Text("Done")),
+                  Obx(
+                    ()=> Padding(
+                      padding: const EdgeInsets.all(30.0),
+                      child: ElevatedButton(onPressed: (){
+                       ctrl.signUp();
+                         Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>const HomePage(),
+                        ),
+                      );
+                                   }, child:ctrl.loading.value?CircularProgressIndicator(color: Colors.white,):Text("SignUp")),
+                    ),
                   )
               ],
             ),

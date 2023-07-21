@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:sample_ui/Screens/both_booking.dart';
 import 'package:sample_ui/Screens/trainbookdetails.dart';
 
 class TrainBooking extends StatefulWidget {

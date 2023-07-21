@@ -1,12 +1,18 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sample_ui/Controllers/authcontroller.dart';
+import 'package:sample_ui/Screens/forgot_password.dart';
 import 'package:sample_ui/Screens/homepage1.dart';
 import 'package:sample_ui/Screens/packages/widget/backgroundimage.dart';
 import 'package:sample_ui/Screens/packages/widget/text.dart';
+import 'package:sample_ui/Screens/signup.dart';
 
 
 class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+   SignInPage({super.key});
+
+  final ctrl = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +43,9 @@ class SignInPage extends StatelessWidget {
                                 color: Colors.grey[600]!.withOpacity(0.5),
                                 borderRadius: BorderRadius.circular(20)
                               ) ,
-                              child: const TextField(
-                                decoration: InputDecoration(
+                              child:  TextField(
+                                controller: ctrl.loginemail,
+                                decoration: const InputDecoration(
                                   contentPadding: 
                                    EdgeInsets.symmetric
                                    (vertical:20 ),
@@ -61,8 +68,9 @@ class SignInPage extends StatelessWidget {
                                 color: Colors.grey[600]!.withOpacity(0.5),
                                 borderRadius: BorderRadius.circular(20)
                               ) ,
-                              child: const TextField(
-                                decoration: InputDecoration(
+                              child:   TextField(
+                                controller: ctrl.loginpassword,
+                                decoration: const InputDecoration(
                                   contentPadding: 
                                    EdgeInsets.symmetric
                                    (vertical:20 ),
@@ -80,17 +88,39 @@ class SignInPage extends StatelessWidget {
                               ),
                               
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(25.0),
-                              child: Text("Forgot Password?",style: kBodyText),
-                            ),
-                            ElevatedButton(onPressed: (){ Navigator.push(
+                            // Padding(
+                            //   padding: const EdgeInsets.all(25.0),
+                            //   child: Text("Create Account",style: kBodyText),
+                            // ),
+                            TextButton(onPressed: (){ Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignUpScreen(),
+                      ),
+                    );
+                 }, child: Column(
+                   children: [
+                     Text("Create Account",style: TextStyle(color:Colors.white),),
+                     TextButton(onPressed: (){Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ForgotPasswordPage(),
+                      ),
+                    );
+                 }, child: Text("Forgot Password",style: TextStyle(color:Colors.white),))
+                   ],
+                 )),
+                            ElevatedButton(onPressed: ()async{
+                              ctrl.signin();
+                               Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) =>const HomePage(),
                       ),
                     );
-                 }, child: Text("Done"))
+                 }, child:Obx(() => 
+                  ctrl.loading.value?CircularProgressIndicator():
+                  Text("LogIn"))),
                           ],
                         ),
                       ),

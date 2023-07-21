@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'our_packages.dart';
-import 'packages/shimla.dart';
-
 
 class PlanYourTrip extends StatefulWidget {
   const PlanYourTrip({super.key});

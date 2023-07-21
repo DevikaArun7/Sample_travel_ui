@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample_ui/Screens/planourtrip.dart';
 
-import '../1_planyourtrip.dart';
 
 class KeralaP extends StatefulWidget {
   const KeralaP({super.key});
