@@ -1,46 +1,27 @@
-class Utils {
-  static List imageList = [
-    {
-      "id": 1,
-      "image_path":
-          'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Kerala.jpeg',
-    },
-    {
-      "id": 2,
-      "image_path":
-          'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Delhi.jpeg'
-    },
-    {
-      "id": 3,
-      "image_path":
-          'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Agra.jpeg'
-    },
-    {
-      "id": 3,
-      "image_path":
-          'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Goa.jpeg'
-    },
-  ];
-   static List imageList1 = [
-    {
-      "id": 1,
-      "image_path":
-          'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaipur.jpeg',
-    },
-    {
-      "id": 2,
-      "image_path":
-          'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Hampi.jpeg'
-    },
-    {
-      "id": 3,
-      "image_path":
-          'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Amithsar.jpeg'
-    },
-    {
-      "id": 3,
-      "image_path":
-          'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mysore.jpeg'
-    },
-  ];
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+
+void showSnackBar(BuildContext context, String content) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+      content: Text(content),
+    ),
+  );
+}
+
+Future<File?> pickImage(BuildContext context) async {
+  File? image;
+  try {
+    final pickedImage =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (pickedImage != null) {
+      image = File(pickedImage.path);
+    }
+  } catch (e) {
+    showSnackBar(context, e.toString());
+  }
+
+  return image;
 }

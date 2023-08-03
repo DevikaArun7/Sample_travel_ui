@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sample_ui/Screens/cancelbooking.dart';
-import 'package:sample_ui/Screens/homepage1.dart';
-import 'package:sample_ui/Screens/hotelbooking.dart';
-import 'package:sample_ui/Screens/trainbooking.dart';
+import 'package:phoneauth_firebase/screens/home_screen.dart';
+import 'package:phoneauth_firebase/screens/trainbooking.dart';
+
+import 'cancelbooking.dart';
+import 'hotelbooking.dart';
 
 class BothBooking extends StatefulWidget {
   const BothBooking({super.key});
@@ -18,7 +19,7 @@ class _BothBookingState extends State<BothBooking> {
       appBar: AppBar(),
       body: Column(
         children: [
-          SizedBox(height: 35,),
+          const SizedBox(height: 35,),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
@@ -29,13 +30,13 @@ class _BothBookingState extends State<BothBooking> {
                 onTap: () {
                   Navigator.push(
                   context,
-                  MaterialPageRoute(builder:(context) => HotelBooking()),
+                  MaterialPageRoute(builder:(context) => const HotelBooking()),
                 );
-                },title: Center(child: Text("Hotel Booking",style:TextStyle(color: Color.fromARGB(208, 2, 113, 204)),)),
+                },title: const Center(child: Text("Hotel Booking",style:TextStyle(color: Color.fromARGB(208, 2, 113, 204)),)),
               ),
             ),
           ),
-          SizedBox(height: 35,),
+          const SizedBox(height: 35,),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
@@ -46,13 +47,13 @@ class _BothBookingState extends State<BothBooking> {
                 onTap: () {
                   Navigator.push(
                   context,
-                  MaterialPageRoute(builder:(context) => TrainBooking()),
+                  MaterialPageRoute(builder:(context) => const TrainBooking()),
                 );
-                },title: Center(child: Text("Train Booking",style:TextStyle(color: Color.fromARGB(208, 2, 113, 204)),)),
+                },title: const Center(child: Text("Train Booking",style:TextStyle(color: Color.fromARGB(208, 2, 113, 204)),)),
               ),
             ),
           ),
-          SizedBox(height: 35,),
+          const SizedBox(height: 35,),
          Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
@@ -63,13 +64,13 @@ class _BothBookingState extends State<BothBooking> {
                 onTap: () {
                   Navigator.push(
                   context,
-                  MaterialPageRoute(builder:(context) => HomePage()),
+                  MaterialPageRoute(builder:(context) => const HomeScreen()),
                 );
-                },title: Center(child: Text("Finish Booking",style:TextStyle(color: Color.fromARGB(208, 2, 113, 204)),)),
+                },title: const Center(child: Text("Finish Booking",style:TextStyle(color: Color.fromARGB(208, 2, 113, 204)),)),
               ),
             ),
           ),
-           SizedBox(height: 35,),
+           const SizedBox(height: 35,),
          Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
@@ -80,9 +81,9 @@ class _BothBookingState extends State<BothBooking> {
                 onTap: () {
                   Navigator.push(
                   context,
-                  MaterialPageRoute(builder:(context) => CancelBooking()),
+                  MaterialPageRoute(builder:(context) => const CancelBooking()),
                 );
-                },title: Center(child: Text("Cancel The Trip",style:TextStyle(color: Color.fromARGB(208, 2, 113, 204)),)),
+                },title: const Center(child: Text("Cancel The Trip",style:TextStyle(color: Color.fromARGB(208, 2, 113, 204)),)),
               ),
             ),
           ),

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "669052903158",
-    "project_id": "travel-app-a7e38",
-    "storage_bucket": "travel-app-a7e38.appspot.com"
+    "project_number": "69745052222",
+    "project_id": "travel-app-523f4",
+    "storage_bucket": "travel-app-523f4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:669052903158:android:6656a0f861b090d29416d7",
+        "mobilesdk_app_id": "1:69745052222:android:bce9c8cde0786d6115df6f",
         "android_client_info": {
-          "package_name": "com.example.sample_ui"
+          "package_name": "com.example.phoneauth_firebase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "669052903158-kjp7is373cdki7o3q7mj206upl4u48gn.apps.googleusercontent.com",
+          "client_id": "69745052222-ul1qj2984ufp78mlh8cqb2at55ish9sd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAElI7vlu5707HJI1tpP3EoVWya36LiuAg"
+          "current_key": "AIzaSyAcbwdwGzK8dI_cUSmoeMOHDMT6rIKZY_U"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "669052903158-kjp7is373cdki7o3q7mj206upl4u48gn.apps.googleusercontent.com",
+              "client_id": "69745052222-ul1qj2984ufp78mlh8cqb2at55ish9sd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

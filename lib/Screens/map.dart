@@ -15,7 +15,7 @@ class _MapPageState extends State<MapPage> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child:
-        Container(
+        SizedBox(
           width: double.infinity,
           height:double.infinity,
           child: Image.asset("C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Map.png",fit:BoxFit.cover,),

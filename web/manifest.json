@@ -1,6 +1,6 @@
 {
-    "name": "sample_ui",
-    "short_name": "sample_ui",
+    "name": "phoneauth_firebase",
+    "short_name": "phoneauth_firebase",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

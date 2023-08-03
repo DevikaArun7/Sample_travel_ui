@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "sample_ui",
+            "name": "phoneauth_firebase",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "sample_ui (profile mode)",
+            "name": "phoneauth_firebase (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "sample_ui (release mode)",
+            "name": "phoneauth_firebase (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

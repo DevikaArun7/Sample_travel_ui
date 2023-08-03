@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sample_ui/Screens/trainbookdetails.dart';
-
+import 'package:phoneauth_firebase/screens/trainbookdetails.dart';
 class TrainBooking extends StatefulWidget {
   const TrainBooking({super.key});
 
@@ -14,14 +13,14 @@ class _TrainBookingState extends State<TrainBooking> {
     return Scaffold(
       backgroundColor: const Color(0xFFC0CECE),
       appBar: AppBar(
-        title: Text("Trains"),
+        title: const Text("Trains"),
       ),
       body: Column(
         children: [
-          Row(
+          const Row(
             children: [
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: EdgeInsets.all(20.0),
                 child: Text(
                   "16347 Mangalore Exp",
                   style: TextStyle(fontSize: 19, color: Colors.black),
@@ -46,16 +45,19 @@ class _TrainBookingState extends State<TrainBooking> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TrainBookingDetails()),
+                            builder: (context) => const TrainBookingDetails()),
                       );
                     },
                     child: Container(
-                      child: Column(
+                      width: 110,
+                      height: 95,
+                      color: const Color.fromARGB(255, 159, 181, 192),
+                      child: const Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: Row(
-                              children: const [
+                              children: [
                                 Text("3A"),
                                 SizedBox(
                                   width: 10,
@@ -74,9 +76,6 @@ class _TrainBookingState extends State<TrainBooking> {
                           )
                         ],
                       ),
-                      width: 110,
-                      height: 95,
-                      color: Color.fromARGB(255, 159, 181, 192),
                     ),
                   ),
                 ),
@@ -89,16 +88,19 @@ class _TrainBookingState extends State<TrainBooking> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TrainBookingDetails()),
+                            builder: (context) => const TrainBookingDetails()),
                       );
                     },
                     child: Container(
-                      child: Column(
+                      width: 110,
+                      height: 95,
+                      color: const Color.fromARGB(255, 159, 181, 192),
+                      child: const Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: Row(
-                              children: const [
+                              children: [
                                 Text("3A"),
                                 SizedBox(
                                   width: 10,
@@ -117,9 +119,6 @@ class _TrainBookingState extends State<TrainBooking> {
                           )
                         ],
                       ),
-                      width: 110,
-                      height: 95,
-                      color: Color.fromARGB(255, 159, 181, 192),
                     ),
                   ),
                 ),
@@ -132,16 +131,19 @@ class _TrainBookingState extends State<TrainBooking> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TrainBookingDetails()),
+                            builder: (context) => const TrainBookingDetails()),
                       );
                     },
                     child: Container(
-                      child: Column(
+                      width: 110,
+                      height: 95,
+                      color: const Color.fromARGB(255, 159, 181, 192),
+                      child: const Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: Row(
-                              children: const [
+                              children: [
                                 Text("3A"),
                                 SizedBox(
                                   width: 10,
@@ -160,9 +162,6 @@ class _TrainBookingState extends State<TrainBooking> {
                           )
                         ],
                       ),
-                      width: 110,
-                      height: 95,
-                      color: Color.fromARGB(255, 159, 181, 192),
                     ),
                   ),
                 ),

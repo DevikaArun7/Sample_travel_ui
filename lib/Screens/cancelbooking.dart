@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sample_ui/Screens/homepage1.dart';
-
+import 'package:phoneauth_firebase/screens/home_screen.dart';
 class CancelBooking extends StatefulWidget {
   const CancelBooking({super.key});
 
@@ -17,35 +16,35 @@ class _CancelBookingState extends State<CancelBooking> {
        ),
        body: Column(
         children: [
-          Row(children: [
+          const Row(children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Text("For Cancel The Trip",style: TextStyle(fontSize: 23),),
             )
           ],),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
+          const Padding(
+            padding: EdgeInsets.all(15.0),
             child: Row(
               children: [
                 Text("Destination: Taj Mahal",style: TextStyle(fontSize: 20),),
               ],
             ),
           ),
-          SizedBox(height: 8,),
-           Padding(
-            padding: const EdgeInsets.all(15.0),
+          const SizedBox(height: 8,),
+           const Padding(
+            padding: EdgeInsets.all(15.0),
             child: Row(
               children: [
                 Text("",style: TextStyle(fontSize: 20),),
               ],
             ),
           ),
-           SizedBox(height: 19,),
+           const SizedBox(height: 19,),
           ElevatedButton(onPressed: (){
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) =>HomePage()),
+        MaterialPageRoute(builder: (context) =>const HomeScreen()),
       );
-   }, child: Text("Cancell This Booking"))
+   }, child: const Text("Cancell This Booking"))
         ],
        )
     );

@@ -1,4 +1,4 @@
-# sample_ui
+# phoneauth_firebase
 
 A new Flutter project.
 
