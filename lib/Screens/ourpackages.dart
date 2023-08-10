@@ -302,7 +302,6 @@ class OurPackages1 extends StatelessWidget {
       child: ListTile(
         onTap: onTap,
         contentPadding: const EdgeInsets.all(10),
-        tileColor: const Color.fromARGB(255, 186, 178, 178),
         leading: CircleAvatar(
           radius: 30,
           backgroundImage: AssetImage(image),

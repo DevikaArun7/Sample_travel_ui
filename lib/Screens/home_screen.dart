@@ -1,8 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:phoneauth_firebase/packages/kerala.dart';
 import 'package:phoneauth_firebase/provider/auth_provider.dart';
 import 'package:phoneauth_firebase/screens/welcome_screen.dart';
 import 'package:provider/provider.dart';
 
+import '../packages/agra.dart';
+import '../packages/amrithsar.dart';
+import '../packages/delhi.dart';
+import '../packages/goa.dart';
+import '../packages/hampi.dart';
+import '../packages/jaipur.dart';
+import '../packages/jaisalmar.dart';
+import '../packages/mumbai.dart';
+import '../packages/mysore.dart';
+import '../packages/shimla.dart';
+import '../packages/taj_mahal.dart';
+import '../packages/udaipur.dart';
+import '../packages/varanasi.dart';
+import 'drawer.dart';
 import 'ourpackages.dart';
 
 
@@ -20,9 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
     final ap = Provider.of<AuthProvider>(context, listen: false);
 
     return Scaffold(
+     
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        title: const Text(""),
         actions: [
           IconButton(
             onPressed: () {
@@ -38,132 +53,266 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: const Icon(Icons.exit_to_app),
           ),
         ],
-      ),
-      body: Center(
-          child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.center,
-        // children: [
-          // CircleAvatar(
-          //   backgroundColor: Colors.purple,
-          //   backgroundImage: NetworkImage(ap.userModel.profilePic),
-          //   radius: 50,
-          // ),
-          // const SizedBox(height: 20),
-          // Text(ap.userModel.name),
-          // Text(ap.userModel.phoneNumber),
-          // Text(ap.userModel.email),
-          // Text(ap.userModel.bio),
-        // ],
-         children: [
-          const Center(
-            child:Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                // CircleAvatar(
-                //   backgroundColor: Colors.purple,
-                //   backgroundImage: NetworkImage(ap.userModel.profilePic),
-                //   radius:50 ,
-                // ),
-                // const SizedBox(height: 20,),
-                // Text(ap.userModel.name),
-                // Text(ap.userModel.phoneNumber),
-                // Text(ap.userModel.email),
-                // Text(ap.userModel.bio),
-              ],
-            ) ,
-          ),
-          // auth.currentUser!.emailVerified
-          // ?SizedBox(height: 1,
-          // )
-          // :Text("${auth.currentUser?.email!}not verified"),
-
-          const SizedBox(
-            height: 150,
-            ),
-          // Text(auth.currentUser?.email ?? ''),
-          // Text(auth.currentUser !.emailVerified
-          // ?"email verified"
-          // :"email not verified"),
-
-         Stack(
-          children: [
-            const SizedBox(
-              height: 500,
-              width: 400,
-              // height: MediaQuery.of(context).size.width,
-             
         
-            
-              
+      ),
+      drawer: NavBar(),
+      body: ListView(
+          padding: const EdgeInsets.all(10),
+          children: [
+            Card(
+              elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+              child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TajMahal(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/slid img2.jpeg',
+                  title: 'Taj Mahal',),
+                  
             ),
-           
-              SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.all(30.0),
-                  child: Center(
-                    child: Column(
-                      children: [
-                        Card(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), ),
-                          elevation: 20,
-                         
-                        color: Colors.white,
-                        // child: Padding(
-                        //   padding: const EdgeInsets.all(15.0),
-                        //   child: Column(
-                        //     mainAxisSize: MainAxisSize.min,
-                        //     children: [
-                        //       Image.asset("C:/Users/HP/Downloads/phoneauth_firebase/phoneauth_firebase/assets/images/Delhi.jpeg",fit: BoxFit.cover,
-                        //      ),
-                        //       const SizedBox(
-                        //         height:50,
-                        //         width: 500,                                                   
-                        //       ),
-                              
-                            
-                        //     ],
-                        //   ),
-                        // ),
-                        ),
-                        const SizedBox(height: 20,),
-                         Card(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), ),
-                          elevation: 20,
-                         
-                        color: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Image.asset("C:/Users/HP/Downloads/phoneauth_firebase/phoneauth_firebase/assets/images/Hampi.jpeg",fit: BoxFit.cover,
-                             ),
-                              const SizedBox(
-                                height:50,
-                                 width: 500,                                                   
-                              ),
-                              ElevatedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>const OurPackages(),
-                  ),
-                  );
-                 }, child: const Text("See Our Packages"))
-                            
-                            ],
-                          ),
-                        ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                    
+            const SizedBox(height: 6,),
+                 Card(
+                   elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+                   child: OurPackages1(
+                                 onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const JaipurPage(),
+                      ),
+                    );
+                                 },
+                                 image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Jaipur.jpeg',
+                                 title: 'Jaipur'),
+                 ),
+                 const SizedBox(height: 6,),
+             Card(
+               elevation: 13,
+             color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+               child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const VaranasiPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Varanasi.jpeg',
+                  title: 'Varanasi'),
+             ),
+             const SizedBox(height: 6,),
+              Card(
+               elevation: 13,
+             color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+               child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const KeralaP(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Kerala.jpeg',
+                  title: 'Kerala'),
+             ),
+                const SizedBox(height: 6,),
+              Card(
+                 elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+                child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const GoaPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Goa.jpeg',
+                  title: 'Goa'),
               ),
-            
+              const SizedBox(height: 6,),
+                 Card(
+                   elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+                   child: OurPackages1(
+                                 onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DelhiPage(),
+                      ),
+                    );
+                                 },
+                                 image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Delhi.jpeg',
+                                 title: 'Delhi'),
+                 ),
+                 const SizedBox(height: 6,),
+            Card(
+               elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+              child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MumbaiPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Mumbai.jpeg',
+                  title: 'Mumbai'),
+            ),
+            const SizedBox(height: 6,),
+             Card(
+               elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+               child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const UdaipurPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Udaipur.jpeg',
+                  title: 'Udaipur'),
+             ),
+             const SizedBox(height: 6,),
+           Card(
+             elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+             child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AmrithsarPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Amithsar.jpeg',
+                  title: 'Amithsar'),
+           ),
+           const SizedBox(height: 6,),
+             Card(
+               elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+               child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HampiPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Hampi.jpeg',
+                  title: 'Hampi'),
+             ),
+             const SizedBox(height: 6,),
+          Card(
+             elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+            child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const JaisalmarPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Jaisalmar.jpeg',
+                  title: 'Jaisalmar'),
+          ),
+          const SizedBox(height: 6,),
+            Card(
+               elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+              child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AgraPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Agra.jpeg',
+                  title: 'Agra'),
+            ),
+            const SizedBox(height: 6,),
+           Card(
+             elevation: 13,
+              color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+             child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MysorePage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Mysore.jpeg',
+                  title: 'Mysore'),
+           ),
+           const SizedBox(height: 6,),
+             Card(
+               elevation: 13,
+             color: const Color.fromARGB(255, 201, 33, 243),
+              shadowColor: Colors.black,
+               child: OurPackages1(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ShimlaPage(),
+                      ),
+                    );
+                  },
+                  image:
+                      'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Shimla.jpeg',
+                  title: 'Shimla'),
+             ),
           ],
-         )
-        ],
-      )),
+        )
     );
   }
 }
