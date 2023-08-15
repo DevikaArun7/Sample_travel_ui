@@ -103,26 +103,29 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       borderSide: const BorderSide(color: Colors.black12),
                     ),
                     prefixIcon: Container(
+                      width: 80,
                       padding: const EdgeInsets.all(8.0),
-                      child: InkWell(
-                        onTap: () {
-                          showCountryPicker(
-                              context: context,
-                              countryListTheme: const CountryListThemeData(
-                                bottomSheetHeight: 550,
-                              ),
-                              onSelect: (value) {
-                                setState(() {
-                                  selectedCountry = value;
+                      child: Center(
+                        child: InkWell(
+                          onTap: () {
+                            showCountryPicker(
+                                context: context,
+                                countryListTheme: const CountryListThemeData(
+                                  bottomSheetHeight: 550,
+                                ),
+                                onSelect: (value) {
+                                  setState(() {
+                                    selectedCountry = value;
+                                  });
                                 });
-                              });
-                        },
-                        child: Text(
-                          "${selectedCountry.flagEmoji} + ${selectedCountry.phoneCode}",
-                          style: const TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
+                          },
+                          child: Text(
+                            "${selectedCountry.flagEmoji} + ${selectedCountry.phoneCode}",
+                            style: const TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),

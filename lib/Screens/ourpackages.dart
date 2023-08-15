@@ -39,41 +39,45 @@ class _OurPackagesState extends State<OurPackages> {
               shadowColor: Colors.black,
               child: OurPackages1(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const TajMahal(),
-                      ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const TajMahal(),
+                    //   ),
+                    // );
                   },
                   image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/slid img2.jpeg',
                   title: 'Taj Mahal'),
             ),
-            const SizedBox(height: 6,),
-                 Card(
-                   elevation: 13,
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-                   child: OurPackages1(
-                                 onTap: () {
+              child: OurPackages1(
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const JaipurPage(),
                       ),
                     );
-                                 },
-                                 image:
+                  },
+                  image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaipur.jpeg',
-                                 title: 'Jaipur'),
-                 ),
-                 const SizedBox(height: 6,),
-             Card(
-               elevation: 13,
+                  title: 'Jaipur'),
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-               child: OurPackages1(
+              child: OurPackages1(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -85,9 +89,11 @@ class _OurPackagesState extends State<OurPackages> {
                   image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Varanasi.jpeg',
                   title: 'Varanasi'),
-             ),
-             const SizedBox(height: 6,),
-                OurPackages1(
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+            OurPackages1(
                 onTap: () {
                   Navigator.push(
                     context,
@@ -99,12 +105,14 @@ class _OurPackagesState extends State<OurPackages> {
                 image:
                     'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Kerala.jpeg',
                 title: 'Kerala'),
-                const SizedBox(height: 6,),
-              Card(
-                 elevation: 13,
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-                child: OurPackages1(
+              child: OurPackages1(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -116,28 +124,32 @@ class _OurPackagesState extends State<OurPackages> {
                   image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Goa.jpeg',
                   title: 'Goa'),
-              ),
-              const SizedBox(height: 6,),
-                 Card(
-                   elevation: 13,
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-                   child: OurPackages1(
-                                 onTap: () {
+              child: OurPackages1(
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const DelhiPage(),
                       ),
                     );
-                                 },
-                                 image:
+                  },
+                  image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Delhi.jpeg',
-                                 title: 'Delhi'),
-                 ),
-                 const SizedBox(height: 6,),
+                  title: 'Delhi'),
+            ),
+            const SizedBox(
+              height: 6,
+            ),
             Card(
-               elevation: 13,
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
               child: OurPackages1(
@@ -153,12 +165,14 @@ class _OurPackagesState extends State<OurPackages> {
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mumbai.jpeg',
                   title: 'Mumbai'),
             ),
-            const SizedBox(height: 6,),
-             Card(
-               elevation: 13,
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-               child: OurPackages1(
+              child: OurPackages1(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -170,13 +184,15 @@ class _OurPackagesState extends State<OurPackages> {
                   image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Udaipur.jpeg',
                   title: 'Udaipur'),
-             ),
-             const SizedBox(height: 6,),
-           Card(
-             elevation: 13,
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-             child: OurPackages1(
+              child: OurPackages1(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -188,13 +204,15 @@ class _OurPackagesState extends State<OurPackages> {
                   image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Amithsar.jpeg',
                   title: 'Amithsar'),
-           ),
-           const SizedBox(height: 6,),
-             Card(
-               elevation: 13,
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-               child: OurPackages1(
+              child: OurPackages1(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -206,13 +224,15 @@ class _OurPackagesState extends State<OurPackages> {
                   image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Hampi.jpeg',
                   title: 'Hampi'),
-             ),
-             const SizedBox(height: 6,),
-          Card(
-             elevation: 13,
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-            child: OurPackages1(
+              child: OurPackages1(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -224,10 +244,12 @@ class _OurPackagesState extends State<OurPackages> {
                   image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Jaisalmar.jpeg',
                   title: 'Jaisalmar'),
-          ),
-          const SizedBox(height: 6,),
+            ),
+            const SizedBox(
+              height: 6,
+            ),
             Card(
-               elevation: 13,
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
               child: OurPackages1(
@@ -243,12 +265,14 @@ class _OurPackagesState extends State<OurPackages> {
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Agra.jpeg',
                   title: 'Agra'),
             ),
-            const SizedBox(height: 6,),
-           Card(
-             elevation: 13,
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-             child: OurPackages1(
+              child: OurPackages1(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -260,13 +284,15 @@ class _OurPackagesState extends State<OurPackages> {
                   image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Mysore.jpeg',
                   title: 'Mysore'),
-           ),
-           const SizedBox(height: 6,),
-             Card(
-               elevation: 13,
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+            Card(
+              elevation: 13,
               color: const Color.fromARGB(255, 208, 201, 201),
               shadowColor: Colors.black,
-               child: OurPackages1(
+              child: OurPackages1(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -278,7 +304,7 @@ class _OurPackagesState extends State<OurPackages> {
                   image:
                       'C:/Users/HP/Desktop/Sample ui making/sample_ui/images/Shimla.jpeg',
                   title: 'Shimla'),
-             ),
+            ),
           ],
         ));
   }
@@ -304,7 +330,7 @@ class OurPackages1 extends StatelessWidget {
         contentPadding: const EdgeInsets.all(10),
         leading: CircleAvatar(
           radius: 30,
-          backgroundImage: AssetImage(image),
+          backgroundImage: NetworkImage(image),
         ),
         title: Text(
           title,
