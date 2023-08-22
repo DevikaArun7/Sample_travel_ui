@@ -1,9 +1,12 @@
 import 'dart:developer';
 
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:phoneauth_firebase/packages/goa.dart';
 import 'package:phoneauth_firebase/provider/auth_provider.dart';
 import 'package:phoneauth_firebase/screens/welcome_screen.dart';
+import 'package:phoneauth_firebase/utils/utils.dart';
 import 'package:provider/provider.dart';
 
 import '../model/package_model.dart';
@@ -29,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
           actions: [
             IconButton(
               onPressed: () {
+                showSnackBar(context, "Log Out");
                 ap.userSignOut().then(
                       (value) => Navigator.push(
                         context,
@@ -40,9 +44,12 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               icon: const Icon(Icons.exit_to_app),
             ),
+            IconButton(onPressed: (){
+            showSearch(context: context, delegate: CustomSearchDelegate(),);
+          }, icon: const Icon(Icons.search))
           ],
         ),
-        drawer: NavBar(),
+        drawer: const NavBar(),
         body: FutureBuilder(
             future: fetchFirestoreData('packages'),
             builder: (context, snapshot) {
@@ -63,14 +70,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                   packageDescription: data.description),
                             ),
                           );
-                        });
+                        }
+                        );
                   },
                   itemCount: snapshot.data!.length,
                 );
               } else {
                 return Text('else');
               }
-            })
+            }
+            )
+            
 
         // ListView(
         //     padding: const EdgeInsets.all(10),
@@ -95,12 +105,12 @@ class _HomeScreenState extends State<HomeScreen> {
         //         shadowColor: Colors.black,
         //              child: OurPackages1(
         //                            onTap: () {
-        //               Navigator.push(
-        //                 context,
-        //                 MaterialPageRoute(
-        //                   builder: (context) => const JaipurPage(),
-        //                 ),
-        //               );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const JaipurPage(),
+                      //   ),
+                      // );
         //                            },
         //                            image:
         //                 'assets/images/Jaipur.jpeg',
@@ -296,7 +306,7 @@ class _HomeScreenState extends State<HomeScreen> {
         //               Navigator.push(
         //                 context,
         //                 MaterialPageRoute(
-        //                   builder: (context) => const MysorePage(),
+        //                   builder: (ckerontext) => const MysorePage(),
         //                 ),
         //               );
         //             },
@@ -310,14 +320,14 @@ class _HomeScreenState extends State<HomeScreen> {
         //        color: const Color.fromARGB(255, 201, 33, 243),
         //         shadowColor: Colors.black,
         //          child: OurPackages1(
-        //             onTap: () {
-        //               Navigator.push(
-        //                 context,
-        //                 MaterialPageRoute(
-        //                   builder: (context) => const ShimlaPage(),
-        //                 ),
-        //               );
-        //             },
+                    // onTap: () {
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const ShimlaPage(),
+                      //   ),
+                      // );
+                    // },
         //             image:
         //                 'C:/Users/HP/Downloads/Travel-App-Roaming-Routes-master/Travel-App-Roaming-Routes-master/assets/images/Shimla.jpeg',
         //             title: 'Shimla'),
@@ -343,4 +353,161 @@ class _HomeScreenState extends State<HomeScreen> {
       throw error;
     }
   }
+}
+
+// class CustomSearchDelegate extends SearchDelegate {
+  
+//   List<String>searchTerms = [
+  //  'Kerala',
+  //  'Goa',
+  //  'Hampi',
+  //  'Jaisalmer',
+  //  'Mysore',
+  //  'Shimla',
+  //  'Jaipur',
+  //  'Varanasi',
+  //  'Mumbai',
+  //  'Delhi',
+  //  'Agra',
+  //  'Amrithsar',
+  //  'Udaipur',
+//   ];
+
+//   @override
+//   List<Widget>? buildActions(BuildContext context) {
+//      return [
+//       IconButton(icon: const Icon(Icons.clear), 
+//       onPressed: () {
+//         query = '' ;
+//       },
+//       )
+//     ];
+//   }
+
+//   @override
+//   Widget? buildLeading(BuildContext context) {
+//      return IconButton(icon: Icon(Icons.arrow_back),
+//     onPressed: (){
+//       close(context, null);
+//     },
+//     );
+//   }
+
+//   @override
+//   Widget buildResults(BuildContext context) {
+//     List<String> matchQuery = [];
+//     for(var fruit in searchTerms){
+//       if(fruit.toLowerCase().contains(query.toLowerCase())) {
+//         matchQuery.add(fruit);
+//       }
+//     }
+//     return ListView.builder(
+//       itemCount: matchQuery.length,
+//       itemBuilder: (context, index) {
+//         var result = matchQuery[index];
+//         return ListTile(
+//           title: Text(result),
+//         );
+//       },
+//       );
+//   }
+
+//   @override
+//   Widget buildSuggestions(BuildContext context) {
+//     List<String>matchQuery = [];
+//     for(var fruit in searchTerms){
+//       if(fruit.toLowerCase().contains(query.toLowerCase())) {
+//         matchQuery.add(fruit);
+//       }
+//     }
+//      return ListView.builder(
+//       itemCount: matchQuery.length,
+//       itemBuilder: (context, index) {
+//         var result = matchQuery[index];
+//         return ListTile(
+//           title: Text(result),
+//         );
+//       },
+//       );
+//   }
+
+// }
+class CustomSearchDelegate extends SearchDelegate {
+  List<String> searchTerms = [
+     'Kerala',
+   'Goa',
+   'Hampi',
+   'Jaisalmer',
+   'Mysore',
+   'Shimla',
+   'Jaipur',
+   'Varanasi',
+   'Mumbai',
+   'Delhi',
+   'Agra',
+   'Amrithsar',
+   'Udaipur',
+  ];
+
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+    return [
+      IconButton(
+        icon: const Icon(Icons.clear),
+        onPressed: () {
+          query = '';
+        },
+      ),
+    ];
+  }
+
+  @override
+  Widget? buildLeading(BuildContext context) {
+    return IconButton(
+      icon: const Icon(Icons.arrow_back),
+      onPressed: () {
+        close(context, null);
+      },
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    // Handle the navigation and display logic here
+    if (searchTerms.contains(query)) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => GoaPage(),
+        ),
+      );
+    }
+
+    return Center(
+      child: Text('No results found for $query'),
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final matchQuery = searchTerms.where((term) => term.toLowerCase().contains(query.toLowerCase())).toList();
+
+    return ListView.builder(
+      itemCount: matchQuery.length,
+      itemBuilder: (context, index) {
+        final result = matchQuery[index];
+        return ListTile(
+          title: Text(result),
+          onTap: () {
+            query = result;
+            showResults(context);
+          },
+        );
+//        },
+//     );
+//   }
+      },
+    );
+  }
+
 }

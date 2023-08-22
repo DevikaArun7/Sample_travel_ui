@@ -151,7 +151,7 @@ class _TrainBookingDetailsState extends State<TrainBookingDetails> {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      height:80 ,
+                      height:170,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.white,
@@ -170,17 +170,16 @@ class _TrainBookingDetailsState extends State<TrainBookingDetails> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(trainSnap['name'],style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
+                              Text(trainSnap['from'],style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
+                              Text(trainSnap['to'],style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
                               Text(trainSnap['phone'].toString(),style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(trainSnap['train'],style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
-                              ),
+                              Text(trainSnap['train'],style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
                             ],
                            ),
                            TextButton(onPressed: (){
                             deleteFlight(trainSnap.id);
                            }, child: Text("Cancel Trip")),
-                          //  IconButton(onPressed: (){}, icon: Icon(Icons.delete))
+                          
                         ],
                       ),
                     ),

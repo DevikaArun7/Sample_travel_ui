@@ -28,7 +28,7 @@ class _TajMahalState extends State<TajMahal> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 width: 400,
                 height: 200,
                 //   decoration: const BoxDecoration(
@@ -39,22 +39,22 @@ class _TajMahalState extends State<TajMahal> {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) =>
                       Image.network(widget.images[index]),
-                  separatorBuilder: (context, index) => SizedBox(width: 5),
+                  separatorBuilder: (context, index) => const SizedBox(width: 5),
                   itemCount: widget.images.length,
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Text(
                   widget.packageName,
-                  style: TextStyle(fontSize: 25, color: Colors.black),
+                  style: const TextStyle(fontSize: 25, color: Colors.black),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Text(
                   widget.packageDescription,
-                  style: TextStyle(fontSize: 17),
+                  style: const TextStyle(fontSize: 17),
                 ),
               ),
               //  ElevatedButton(onPressed: (){

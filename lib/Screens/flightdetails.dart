@@ -37,11 +37,11 @@ class _FlightBookingDetailsState extends State<FlightBookingDetails> {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      height:80 ,
+                      height:170 ,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.white,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             color: Color.fromARGB(255, 240, 236, 236),
                             blurRadius: 10,
@@ -55,17 +55,19 @@ class _FlightBookingDetailsState extends State<FlightBookingDetails> {
                            Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(flightSnap['name'],style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
-                              Text(flightSnap['phone'].toString(),style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
+                              Text(flightSnap['name'],style:const TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
+                               Text(flightSnap['from'],style:const TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
+                                Text(flightSnap['to'],style:const TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
+                              Text(flightSnap['phone'].toString(),style:const TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text(flightSnap['flight'],style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
+                                child: Text(flightSnap['flight'],style:const TextStyle(fontSize: 18,fontWeight: FontWeight.bold) ,),
                               ),
                             ],
                            ),
                            TextButton(onPressed: (){
                             deleteFlight(flightSnap.id);
-                           }, child: Text("Cancel Trip")),
+                           }, child: const Text("Cancel Trip")),
                           //  IconButton(onPressed: (){}, icon: Icon(Icons.delete))
                         ],
                       ),

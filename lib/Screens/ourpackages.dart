@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
+import '../model/hampi.dart';
 import '../packages/agra.dart';
 import '../packages/amrithsar.dart';
 import '../packages/delhi.dart';
 import '../packages/goa.dart';
-import '../packages/hampi.dart';
 import '../packages/jaipur.dart';
 import '../packages/jaisalmar.dart';
 import '../packages/kerala.dart';
 import '../packages/mumbai.dart';
 import '../packages/mysore.dart';
 import '../packages/shimla.dart';
-import '../packages/taj_mahal.dart';
 import '../packages/udaipur.dart';
 import '../packages/varanasi.dart';
 

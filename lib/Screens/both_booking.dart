@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phoneauth_firebase/Screens/flightplanning.dart';
+import 'package:phoneauth_firebase/Screens/hotelbooking.dart';
 import 'package:phoneauth_firebase/Screens/trainplanning.dart';
 import 'package:phoneauth_firebase/screens/home_screen.dart';
 
@@ -53,6 +54,23 @@ class _BothBookingState extends State<BothBooking> {
               ),
             ),
           ),
+          // const SizedBox(height: 35,),
+          // Padding(
+          //   padding: const EdgeInsets.all(16.0),
+          //   child: Container(
+          //     width: double.infinity,
+          //     height: 50,
+          //     color: Color.fromARGB(255, 191, 135, 201),
+          //     child: ListTile(
+          //       onTap: () {
+          //         Navigator.push(
+          //         context,
+          //         MaterialPageRoute(builder:(context) => const HotelBooking()),
+          //       );
+          //       },title: const Center(child: Text("Hotel Booking",style:TextStyle(color:Colors.black),)),
+          //     ),
+          //   ),
+          // ),
           const SizedBox(height: 35,),
          Padding(
             padding: const EdgeInsets.all(16.0),

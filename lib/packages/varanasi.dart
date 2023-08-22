@@ -22,7 +22,7 @@ class _VaranasiPageState extends State<VaranasiPage> {
          padding: const EdgeInsets.all(8.0),
          child: Column(
            children: [
-             Container(
+             SizedBox(
               width: 400,
               height: 200,
             //   decoration: const BoxDecoration(

@@ -112,12 +112,16 @@ class _TrainPlanningState extends State<TrainPlanning> {
 
   TextEditingController trainName = TextEditingController();
   TextEditingController trainPhone = TextEditingController();
+  TextEditingController trainFrom = TextEditingController();
+  TextEditingController trainTo = TextEditingController();
 
 
   void addTrain(){
     final data = {
       'name': trainName.text,
       'phone': trainPhone.text,
+      'from':trainFrom.text,
+      'to':trainTo.text,
       'train': selectedGroup
       };
     train.add(data);
@@ -132,7 +136,7 @@ class _TrainPlanningState extends State<TrainPlanning> {
       ),
       body:  Padding(
         padding: EdgeInsets.all(15.0),
-        child: Column(
+        child: ListView(
         children: [
            Padding(
             padding: EdgeInsets.all(8.0),
@@ -153,6 +157,26 @@ class _TrainPlanningState extends State<TrainPlanning> {
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 label: Text("Phone Number")
+              ),
+            ),
+          ),
+           Padding(
+            padding: EdgeInsets.all(8.0),
+            child: TextField(
+              controller:trainFrom,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                label: Text("From")
+              ),
+            ),
+          ),
+           Padding(
+            padding: EdgeInsets.all(8.0),
+            child: TextField(
+              controller:trainTo ,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                label: Text("To")
               ),
             ),
           ),

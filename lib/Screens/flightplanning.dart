@@ -289,12 +289,16 @@ class _FlightPlanningState extends State<FlightPlanning> {
 
   TextEditingController flightName = TextEditingController();
   TextEditingController flightPhone = TextEditingController();
+  TextEditingController flightfrom = TextEditingController();
+  TextEditingController flightto = TextEditingController();
 
 
   void addflight(){
     final data = {
       'name': flightName.text,
       'phone': flightPhone.text,
+      'from':flightfrom.text,
+      'to':flightto.text,
       'flight': selectedGroup
       };
     flight.add(data);
@@ -304,30 +308,50 @@ class _FlightPlanningState extends State<FlightPlanning> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("Let's Plan Your Trip"),
+        title:  const Text("Let's Plan Your Trip"),
         backgroundColor: Colors.purple,
       ),
       body:  Padding(
-        padding: EdgeInsets.all(15.0),
-        child: Column(
+        padding: const EdgeInsets.all(15.0),
+        child: ListView(
         children: [
            Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: TextField(
               controller:flightName ,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 label: Text("Enter Your Name")
               ),
             ),
           ),
            Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller:flightfrom ,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                label: Text("From")
+              ),
+            ),
+          ),
+           Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller:flightto ,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                label: Text("To")
+              ),
+            ),
+          ),
+           Padding(
+            padding: const EdgeInsets.all(8.0),
             child: TextField(
               controller: flightPhone,
               keyboardType:TextInputType.number ,
               maxLength: 10,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 label: Text("Phone Number")
               ),
@@ -336,7 +360,7 @@ class _FlightPlanningState extends State<FlightPlanning> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: DropdownButtonFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 label: Text("Select Flight")
               ),
               items: Fligts.
