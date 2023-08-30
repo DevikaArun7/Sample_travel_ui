@@ -8,8 +8,9 @@ class TajMahal extends StatefulWidget {
       {super.key,
       required this.packageName,
       required this.packageDescription,
-      required this.images});
-  final List<dynamic> images;
+       this.images
+      });
+  final List<dynamic>? images;
   final String packageName;
   final String packageDescription;
 
@@ -38,9 +39,10 @@ class _TajMahalState extends State<TajMahal> {
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) =>
-                      Image.network(widget.images[index]),
+                      Image.network(widget.images![index]
+                      ),
                   separatorBuilder: (context, index) => const SizedBox(width: 5),
-                  itemCount: widget.images.length,
+                  itemCount: widget.packageName.length,
                 ),
               ),
               Padding(
